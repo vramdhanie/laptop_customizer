@@ -8,10 +8,7 @@ export default class CustomizerApp extends React.Component {
     render() {
         return (
             <main>
-                <section className="main__form">
-                    <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-                    { this.props.features }
-                </section>
+                <FeatureList features={this.props.features} />
                 <section className="main__summary">
                     <h3>NEW GREENLEAF 2018</h3>
                     {this.props.summary}
@@ -22,8 +19,8 @@ export default class CustomizerApp extends React.Component {
                                 .format(this.props.total) }
                         </div>
                     </div>
-            </section>
-          </main>
+                </section>
+            </main>
         );
     }
 }
