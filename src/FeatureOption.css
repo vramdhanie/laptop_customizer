@@ -1,0 +1,20 @@
+.feature__list {
+    list-style: none;
+  }
+  
+  .feature__option:not(.feature__selected) {
+    cursor: pointer;
+  }
+  
+  .feature__option:not(.feature__selected):hover {
+    text-shadow: 1px 1px 2px blue;
+  }
+  
+  .feature__option {
+    margin-top: 4px;
+    padding: 2px;
+  }
+  
+  .feature__selected {
+    background: #DEDEDE;
+  }
