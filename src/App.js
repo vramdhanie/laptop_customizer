@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      // Your state can be more generic. 
+      // Your component structure doesn't seem to match your state. 
       // In reality, you can have an unlimited number of features, not just these four.
       selected: {
         Processor: {
