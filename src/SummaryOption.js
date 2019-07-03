@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SummaryOption.css';
 
+// As with FeatureOption, how can you break this down, or restructure, this component to be more specific?
 class SummaryOption extends Component {
     render() {
         const summary = Object.keys(this.props.selected)

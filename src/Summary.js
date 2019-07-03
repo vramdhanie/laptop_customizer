@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Summary.css';
 import SummaryOption from './SummaryOption.js'
 
+// Most of the feedback for Features applies to Summary.
+// You can probably break down this component still into more specific sections.
 class Summary extends Component {
     render() {
 

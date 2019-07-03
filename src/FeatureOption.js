@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './FeatureOption.css';
 
+// How can you make FeatureOption more generic? 
+// Can you break this component a little more so that all this logic and display is not all in one place?
 class FeatureOption extends Component {
     render() {
         const features = Object.keys(this.props.features)

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './Features.css';
 import FeatureOption from './FeatureOption.js';
 
+// Right now, Features is just a passthrough component. 
+// It doesn't do anything outside of providing props to FeatureOption.
+// Do you need this component?
+// Better yet, what parts of FeatureOption make more sense here?
 class Features extends Component {
     render() {  
           

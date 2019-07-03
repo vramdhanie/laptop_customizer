@@ -7,6 +7,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      // Your state can be more generic. 
+      // In reality, you can have an unlimited number of features, not just these four.
       selected: {
         Processor: {
             name: '17th Generation Intel Core HB (7 Core with donut spare)',
@@ -29,9 +31,12 @@ class App extends Component {
   }
 
   updateFeature(feature, newValue) {
+    // Make sure to delete these out of your app when it's final (or when the logs are no longer useful to you).
     console.log('updateFeature ran');
     console.log(feature, newValue);
     const selected = Object.assign({}, this.state.selected);
+    // You should be able to determine what was changed without having to pass these values to your event handler.
+    // Have you looked into the event object?
     selected[feature] = newValue;
     this.setState({
       selected
@@ -41,12 +46,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* Header can be a component in and of itself. 
+            Imagine what would happen if you wanted to expand this application beyond this one page... */}
         <header>
           <h1>ELF Computing</h1>
           <h3>Laptops</h3>
           <h5>Customize your laptop</h5>  
         </header>      
         <main>
+            {/* I like the features and summary components as encapsulating sections, but you can do more... */}
             <Features features={this.props.features} selected={this.state.selected} handleUpdate={(feature, newValue) => this.updateFeature(feature, newValue)} />
             <Summary selected={this.state.selected}/>
         </main>
